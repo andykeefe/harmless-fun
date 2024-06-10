@@ -23,7 +23,6 @@ def pinger(target_host, max_tests=11):
             
             latency = output.split("time=")[-1].split(" ")[0]
             # latency = output.split('time=")[-1].split("ms")[0]
-            # Comment out line 24 and uncomment line 25 if using Windows for ping test
 
             """
 
@@ -34,6 +33,8 @@ def pinger(target_host, max_tests=11):
                 Note that the output for ping is different on Linux vs Windows, the 
                 main difference (for the purpose of this program) being that Linux 
                 automatically puts a space after the latency value and Windows doesn't.
+                
+                Comment out line 24 and uncomment line 25 if using Windows.
 
             """
             
