@@ -22,6 +22,21 @@ def pinger(target_host, max_tests=11):
             """
             
             latency = output.split("time=")[-1].split(" ")[0]
+            # latency = output.split('time=")[-1].split("ms")[0]
+            # Comment out line 24 and uncomment line 25 if using Windows for ping test
+
+            """
+
+                This is an elegant way to extract only the latency value, without
+                any other extraneous information. The output variable will be full
+                of full ping outputs, such as:
+                        Reply from 10.0.0.1: bytes=32 time=7 ms TTL=53
+                Note that the output for ping is different on Linux vs Windows, the 
+                main difference (for the purpose of this program) being that Linux 
+                automatically puts a space after the latency value and Windows doesn't.
+
+            """
+            
             total_latency += float(latency)
             print(f"Test #{count} --> Latency: {latency} ms")
             count += 1
