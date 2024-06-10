@@ -5,7 +5,7 @@ from time import sleep, strftime
 from datetime import date
 
 
-def pinger(target_host, max_tests=11):
+def pinger(target_host, max_tests=51):
     count = 1
     total_latency = 0
     
