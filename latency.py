@@ -59,7 +59,7 @@ def pinger(target_host, max_tests=51):
             print("-------------------------------------------------\n")
         
         f.write("---------------------------------------------------------\n")
-        f.write(f"Date: {strftime('%m/%d/%Y')}\nTtarget: {target_host}")
+        f.write(f"Date: {strftime('%m/%d/%Y')}\nTarget: {target_host}")
         f.write(f"\nAverage latency: {average_latency} ms\n")
 
 
