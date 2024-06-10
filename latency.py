@@ -8,7 +8,7 @@ from datetime import date
 def pinger(target_host, max_tests=11):
     count = 1
     total_latency = 0
-        
+    
     with open("tests.txt", "a") as f:
         while count < max_tests:
             output = check_output(['ping', '-c', '1', target_host], universal_newlines=True)
