@@ -30,8 +30,8 @@ def pinger(target_host, max_tests=11):
             print("-------------------------------------------------\n")
         
         f.write("---------------------------------------------------------\n")
-        f.write(f"Date: {strftime('%m/%d/%Y')}\nAverage latency to target: {target_host}")
-        f.write(f"\n{average_latency} ms\n")
+        f.write(f"Date: {strftime('%m/%d/%Y')}\nTtarget: {target_host}")
+        f.write(f"\nAverage latency: {average_latency} ms\n")
 
 
 if __name__ == '__main__':
