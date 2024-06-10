@@ -63,7 +63,7 @@ if __name__ == '__main__':
     
     if target.lower() in('y', 'yes'):
         to_be_pinged = input("Enter an address to be pinged: ")
-        print(f"\nTarget:   {to_be_pinged}")
+        print(f"\nTarget: {to_be_pinged}")
         pinger(to_be_pinged)
 
     else:
