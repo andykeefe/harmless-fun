@@ -1,8 +1,6 @@
 #  Information about this program at the bottom of this page. 
-
 from subprocess import check_output
 from time import sleep, strftime
-
 
 def pinger(target_host, max_tests=51):
     count = 1
