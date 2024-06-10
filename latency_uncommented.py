@@ -2,7 +2,7 @@ from subprocess import check_output
 from time import sleep, strftime
 from datetime import date
 
-def pinger(target_host, max_tests=11):
+def pinger(target_host, max_tests=51):
     count = 1
     total_latency = 0
     
@@ -30,7 +30,7 @@ def pinger(target_host, max_tests=11):
             print("-------------------------------------------------\n")
         
         f.write("---------------------------------------------------------\n")
-        f.write(f"Date: {strftime('%m/%d/%Y')}\nTtarget: {target_host}")
+        f.write(f"Date: {strftime('%m/%d/%Y')}\nTarget: {target_host}")
         f.write(f"\nAverage latency: {average_latency} ms\n")
 
 if __name__ == '__main__':
