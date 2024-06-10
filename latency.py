@@ -12,6 +12,15 @@ def pinger(target_host, max_tests=11):
     with open("tests.txt", "a") as f:
         while count < max_tests:
             output = check_output(['ping', '-c', '1', target_host], universal_newlines=True)
+            
+            """ 
+
+                check_output runs a command with some arguments. In this case,
+                we run 'ping -c 1 target_host', meaning we send one packet for each
+                command, storing the result in a newline to variable 'output'
+
+            """
+            
             latency = output.split("time=")[-1].split(" ")[0]
             total_latency += float(latency)
             print(f"Test #{count} --> Latency: {latency} ms")
