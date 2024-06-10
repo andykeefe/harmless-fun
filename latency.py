@@ -29,7 +29,9 @@ def pinger(target_host, max_tests=11):
                 This is an elegant way to extract only the latency value, without
                 any other extraneous information. The output variable will be full
                 of full ping outputs, such as:
+                        
                         Reply from 10.0.0.1: bytes=32 time=7 ms TTL=53
+                
                 Note that the output for ping is different on Linux vs Windows, the 
                 main difference (for the purpose of this program) being that Linux 
                 automatically puts a space after the latency value and Windows doesn't.
@@ -79,9 +81,9 @@ if __name__ == '__main__':
     to the request for a target, it will ping that. 
 
         This test runs a simple ping scan, stores the latency values, and calculates an average
-    latency over the course of the max_tests variable. It's currently set to 10 tests, but can
-    be change to any value. For example, if you wanted to run 50 tests, the max_tests variable
-    can be set to 51. 
+    latency over the course of the max_tests variable. It's currently set to 50 tests, but can
+    be change to any value. For example, if you wanted to run 100 tests, the max_tests variable
+    can be set to 101. 
 
         Every latency value is printed, as well as the average latency. For record keeping, we store
     the date, target address, and average latency of the test. 
