@@ -10,11 +10,11 @@ def pinger(target_host, max_tests=11):
         while count < max_tests:
             output = check_output(['ping', '-c', '1', target_host], universal_newlines=True)
             # output = check_output(['ping', '-n', '1', target_host], universal_newlines=True)
-            # ^^ If on Windows, uncomment line above, and comment out two lines abov.
+            # ^^ If on Windows, uncomment line above, and comment out two lines above.
             
             latency = output.split("time=")[-1].split(" ")[0]
             # latency = output.split('time=")[-1].split("ms")[0]
-            # ^^ If on Windows, uncomment line above, and comment out two lines abov.
+            # ^^ If on Windows, uncomment line above, and comment out two lines above.
             
             total_latency += float(latency)
             print(f"Test #{count} --> Latency: {latency} ms")
