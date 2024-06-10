@@ -1,3 +1,5 @@
+#  Information about this program is stored at the bottom of this page. 
+
 from subprocess import check_output
 from time import sleep, strftime
 from datetime import date
@@ -43,3 +45,23 @@ if __name__ == '__main__':
     else:
         print("Default target: fountaindale.org")
         pinger("fountaindale.org")
+
+"""
+
+        This is a program for testing the latency of a network. To give it more malleability,
+    it asks the user if they'd like to input an address to target. This functionality could
+    be useful if there are suspected network disruptions occuring. Testing the latency of your
+    router, for example, could give basic information on its performance. 
+    
+        The default is fountaindale.org, so if the user prompts anything but "yes" in response 
+    to the request for a target, it will ping that. 
+
+        This test runs a simple ping scan, stores the latency values, and calculates an average
+    latency over the course of the max_tests variable. It's currently set to 10 tests, but can
+    be change to any value. For example, if you wanted to run 50 tests, the max_tests variable
+    can be set to 51. 
+
+        Every latency value is printed, as well as the average latency. For record keeping, we store
+    the date, target address, and average latency of the test. 
+
+"""
