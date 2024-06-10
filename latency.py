@@ -16,10 +16,8 @@ def pinger(target_host, max_tests=11):
             total_latency += float(latency)
             print(f"Test #{count} --> Latency: {latency} ms")
             count += 1
-            sleep(0.02)
-
-            average_latency_float = total_latency / (max_tests - 1)
-            average_latency = round(average_latency_float, 1)
+            sleep(0.01)
+            average_latency = round(total_latency / (max_tests - 1), 1)
         
         if count == max_tests:
             print(f"\nAverage latency: ~{average_latency} ms")
