@@ -44,7 +44,7 @@ def pinger(target_host, max_tests=101):
                 """  Instead of printing the lengthy error message when an
                      address is not found, we just print the target host.   """
 
-            average_latency = round(total_latency / (max_tests - 1), 1)
+        average_latency = round(total_latency / (max_tests - 1), 1)
         
         if count == max_tests:
             print(f"\nAverage latency: ~{average_latency} ms")
