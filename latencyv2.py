@@ -31,7 +31,7 @@ def pinger(target_host, max_tests=101, quiet=True):
                 total_latency += float(latency)
                 
                 # Converts latency value to a floating point number
-                if quiet is not True:
+                if not quiet:
                     print(f"Test #{count} --> Latency: {latency} ms")
                 count += 1
 
