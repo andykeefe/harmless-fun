@@ -4,7 +4,7 @@
 from subprocess import check_output
 from time import sleep, strftime
 
-def pinger(target_host, max_tests=101):
+def pinger(target_host, max_tests=101, quiet=True):
     count = 1
     total_latency = 0
         
@@ -31,10 +31,10 @@ def pinger(target_host, max_tests=101):
                 total_latency += float(latency)
                 
                 # Converts latency value to a floating point number
-                
-                print(f"Test #{count} --> Latency: {latency} ms")
+                if quiet is not True:
+                    print(f"Test #{count} --> Latency: {latency} ms")
                 count += 1
-                sleep(0.01)
+
             except Exception:
                 print("---------------------------------------")
                 print(f"ADDRESS NOT FOUND --> {target_host}")
