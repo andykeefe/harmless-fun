@@ -1,7 +1,6 @@
 from scapy.all import *
 
 PROTOCOLS = {
-    
     1: "ICMP",
     6: "TCP",
     17: "UDP"
