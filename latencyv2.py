@@ -1,8 +1,5 @@
-#  Info about this program on GitHub, at bottom of code
-#  In repository harmelss-fun
-
 from subprocess import check_output
-from time import sleep, strftime
+from time import strftime
 
 def pinger(target_host, max_tests=101, quiet=True):
     count = 1
